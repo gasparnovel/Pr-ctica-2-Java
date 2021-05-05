@@ -27,7 +27,7 @@ public class Menu {
             System.out.println("8. Sustitucion de vocales en una cadena");
             System.out.println("9. Código ASCII de los carácteres de una cadena");
             System.out.println("0. Salir del programa");
-            System.out.print("Introduzca una opción válida a realizar: ");
+            System.out.print("\n" + "Introduzca una opción válida a realizar: ");
 
             numero = Integer.parseInt(sc.nextLine());
 
@@ -77,8 +77,7 @@ public class Menu {
 
     public static void arrayEnOrden() {
         int arr[] = new int[5];
-        System.out.println("\n");
-        System.out.println("Introduzca 5 números: " + "\n");
+        System.out.println("\n" + "Introduzca 5 números: " + "\n");
         for (int i = 0; i < arr.length; i++) {
             System.out.print("posicion[" + i + "]= numero ");
             arr[i] = sc.nextInt();
@@ -97,8 +96,7 @@ public class Menu {
     public static void arrayEnOrdenInverso() {
 
         int arr[] = new int[5];
-        System.out.println("\n");
-        System.out.println("Introduzca 5 números: " + "\n");
+        System.out.println("\n" + "Introduzca 5 números: " + "\n");
         for (int i = 0; i < arr.length; i++) {
             System.out.print("posicion[" + i + "]= numero ");
             arr[i] = sc.nextInt();
@@ -120,7 +118,7 @@ public class Menu {
         double sumaNeg = 0; // acumuladores para las sumas de positivos y negativos
 
         // lectura de datos y llenar el array
-        System.out.println("\n" + "Introduzca 5 números: ");
+        System.out.println("\n" + "Introduzca 5 números: "+ "\n");
         for (int i = 0; i < arr.length; i++) {
             System.out.print("numero= ");
             arr[i] = sc.nextInt();
@@ -152,7 +150,7 @@ public class Menu {
             System.out.println(("\n" + "No ha introducido numeros negativos"));
         }
         if (ceros >= 0) {
-            System.out.println(("\n" + "Hay exactamente: " + ceros + " ceros"));
+            System.out.println(("\n" + "Cantidad exacta de ceros: " + ceros));
         } else {
             System.out.println(("\n" + "No hay ceros"));
         }
@@ -161,64 +159,64 @@ public class Menu {
     public static void cantidadCaracteres() {
 
         System.out.println("\n");
-        System.out.println("Introduzca un texto " + "\n");
+        System.out.println("\n" + "Introduzca un texto " + "\n");
         String texto = sc.nextLine();
 
         int textoSinEspacios = texto.replace(" ", "").length();
-        System.out.println("Cantidad de carácteres en el texto sin contar espacios: " + textoSinEspacios);
+        System.out.println("\n" + "Cantidad de carácteres en el texto sin contar espacios: " + textoSinEspacios);
 
     }
 
     public static void textoEnOrdenInverso() {
 
         System.out.println("\n");
-        System.out.println("Introduzca un texto " + "\n");
+        System.out.println("\n" + "Introduzca un texto " + "\n");
         String texto = sc.nextLine();
         StringBuilder textoInvertido = new StringBuilder(texto);
-        System.out.println("Texto en orden inverso: " + textoInvertido.reverse());
+        System.out.println("\n" + "Texto en orden inverso: " + textoInvertido.reverse());
     }
 
     public static void textoSinEspacios() {
 
         System.out.println("\n");
-        System.out.println("Introduzca un texto " + "\n");
+        System.out.println("\n" + "Introduzca un texto " + "\n");
         String texto = sc.nextLine();
-        System.out.println("Texto sin espacios: " + texto.replace(" ", ""));
+        System.out.println("\n" + "Texto sin espacios: " + texto.replace(" ", ""));
 
     }
 
     public static void cadenasConcatenadas() {
 
         System.out.println("\n");
-        System.out.println("Introduzca un textos " + "\n");
+        System.out.println("\n" + "Introduzca un textos " + "\n");
         String texto1 = sc.nextLine();
-        System.out.println("Introduzca otro texto " + "\n");
+        System.out.println("\n" + "Introduzca otro texto " + "\n");
         String texto2 = sc2.nextLine();
 
-        System.out.println("Textos concatenados: " + texto1 + texto2);
+        System.out.println("\n" + "Textos concatenados: " + texto1 + texto2);
 
     }
 
     public static void sustitucionDeVocales() {
 
-        System.out.println("Introduzca un textos " + "\n");
+        System.out.println("\n" + "Introduzca un texto " + "\n");
         String texto = sc.nextLine();
-        System.out.println("Introduzca una vocal :");
+        System.out.println("\n" + "Introduzca una vocal :");
         String vocal = sc2.nextLine();
         String textoSustituido = texto.replaceAll("[aeiouAEIOU]", vocal);
-        System.out.println("Cadena sustituida por vocales: " + textoSustituido);
+        System.out.println("\n" + "Cadena sustituida por vocales: " + textoSustituido);
 
     }
 
     public static void codigoAscii() {
 
-        System.out.println("Introduzca un textos " + "\n");
+        System.out.println("\n" + "Introduzca un texto " + "\n");
         String texto = sc.nextLine();
         char[] ascii = texto.toCharArray();
 
         for (int i = 0; i < ascii.length; i++) {
 
-            System.out.println("El ascii de la letra " + ascii[i] + " es " + "[" + (int) texto.charAt(i) + "]");
+            System.out.println("\n" + "El ascii de la letra " + ascii[i] + " es " + "[" + (int) texto.charAt(i) + "]");
 
         }
 
