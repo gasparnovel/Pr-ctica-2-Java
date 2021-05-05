@@ -7,14 +7,15 @@ import java.util.Scanner;
 
 public class Menu {
 
-    static final Scanner sc = new Scanner(System.in);
+    static final Scanner sc = new Scanner(System.in); // Creamos dos variables estaticas para usarlas durante el ejercicio
     static final Scanner sc2 = new Scanner(System.in);
 
     public static void main(String[] args) {
+        
+        
+        int numero = 0; // instanciamos una variable
 
-        int numero = 0;
-
-        do {
+        do { // creamos un bucle do-while para que haga siempre lo mismo mientras no haya una condicion especial
             System.out.println("Bienvenido al menú!");
             System.out.println("\n" + "Qué desea realizar?" + "\n");
             System.out.println("1. Array de 5 números en orden");
@@ -29,12 +30,12 @@ public class Menu {
             System.out.println("0. Salir del programa");
             System.out.print("\n" + "Introduzca una opción válida a realizar: ");
 
-            numero = Integer.parseInt(sc.nextLine());
+            numero = Integer.parseInt(sc.nextLine()); // creamos una variable que almacenara lo que teclehemos por pantalla convirtiendolo en interger
 
-            while (numero != 0) {
-                switch (numero) {
+            while (numero != 0) { // creamos un bucle while que durara mientras el numero almacenado sea diferente a 0
+                switch (numero) { // // creamos un switch para los diferente casos de ejercicios
                     case 1:
-                        arrayEnOrden();
+                        arrayEnOrden(); // assignamos metodos a los casos
                         break;
 
                     case 2:
@@ -67,15 +68,16 @@ public class Menu {
                         break;
                 }
             }
-        } while (numero != 0);
+        } while (numero != 0); // es el final del do-while que se ejecuta mientras sea difernte a 0
 
-        sc.close();
+        sc.close(); // cierra la conexion
 
-        System.out.println("¡Finalizada la ejecución del menú!");
+        System.out.println("¡Finalizada la ejecución del menú!"); // muestra el mensaje por pantalla
 
     }
 
-    public static void arrayEnOrden() {
+
+    public static void arrayEnOrden() { // creamos un array, le insertamos 5 numeros y nos los muestra en orden
         int arr[] = new int[5];
         System.out.println("\n" + "Introduzca 5 números: " + "\n");
         for (int i = 0; i < arr.length; i++) {
@@ -88,12 +90,9 @@ public class Menu {
             System.out.print("[" + arr[posicion] + "]");
             posicion++;
         }
-        // sc.close();
-
-        // System.out.println("¡Finalizada la ejecución del menú!");
     }
 
-    public static void arrayEnOrdenInverso() {
+    public static void arrayEnOrdenInverso() {  // creamos un array, le insertamos 5 numeros y nos los muestra en orden inverso
 
         int arr[] = new int[5];
         System.out.println("\n" + "Introduzca 5 números: " + "\n");
@@ -109,7 +108,7 @@ public class Menu {
         }
     }
 
-    public static void mediaPosNegCeros() {
+    public static void mediaPosNegCeros() {  // creamos un array, le insertamos 5 numeros y nos los muestra las medias de numeros positivos, negativos y cantidad de 0
         int pos = 0;
         int neg = 0; // contadores de los números positivos y negativos
         int ceros = 0;
@@ -156,7 +155,7 @@ public class Menu {
         }
     }
 
-    public static void cantidadCaracteres() {
+    public static void cantidadCaracteres() {  // muestra la cantidad de caracteres en enteros
 
         System.out.println("\n");
         System.out.println("\n" + "Introduzca un texto " + "\n");
@@ -167,7 +166,7 @@ public class Menu {
 
     }
 
-    public static void textoEnOrdenInverso() {
+    public static void textoEnOrdenInverso() {  // muestra un texto en orden inverso
 
         System.out.println("\n");
         System.out.println("\n" + "Introduzca un texto " + "\n");
@@ -176,7 +175,7 @@ public class Menu {
         System.out.println("\n" + "Texto en orden inverso: " + textoInvertido.reverse());
     }
 
-    public static void textoSinEspacios() {
+    public static void textoSinEspacios() { // muestra el texto sin espacios en blanco
 
         System.out.println("\n");
         System.out.println("\n" + "Introduzca un texto " + "\n");
@@ -185,7 +184,7 @@ public class Menu {
 
     }
 
-    public static void cadenasConcatenadas() {
+    public static void cadenasConcatenadas() { // insertamos dos cadenas por teclado y nos las muestra unidas
 
         System.out.println("\n");
         System.out.println("\n" + "Introduzca un textos " + "\n");
@@ -197,7 +196,7 @@ public class Menu {
 
     }
 
-    public static void sustitucionDeVocales() {
+    public static void sustitucionDeVocales() {  // pedimos un texto y una vocal y nos sustituye las vocales del texto por la vocal introducida
 
         System.out.println("\n" + "Introduzca un texto " + "\n");
         String texto = sc.nextLine();
@@ -208,7 +207,7 @@ public class Menu {
 
     }
 
-    public static void codigoAscii() {
+    public static void codigoAscii() {  // nos muestra los caracteres del texto introducidos por su valor en codigo ascii
 
         System.out.println("\n" + "Introduzca un texto " + "\n");
         String texto = sc.nextLine();
